@@ -1,14 +1,16 @@
-import "./navbar.css"
-import logoimage from "../assets/brandlogo.png"
-import { useState , useEffect} from "react"
-import { useNavigate } from "react-router-dom"
+import "./navbar.css";
+import barndlogo from "../assets/brandlogo.png";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { isLogin } from "../redux/actions";
 
 export const NavBar = () => {
-  let [topopened, setToppened] = useState(false);
   const [isBlurred, setIsBlurred] = useState(false);
   let navigate = useNavigate();
-
-  let [userlogged , setUserLoggedin] = useState(false)
+  let islogged = useSelector((state) => state.loggedIn);
+  let name = JSON.parse(localStorage.getItem("name"))?.split(" ")[0];
+  let dispatch = useDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,106 +26,40 @@ export const NavBar = () => {
     };
   }, []);
 
-  function handleImageClick() {
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("name");
+    dispatch(isLogin(false));
     navigate("/");
-    setToppened(!topopened);
-  }
-
-  function handleCart() {
-    navigate("/cart");
-    setToppened(!topopened);
-  }
-
-  function handleSignout() {
-    localStorage.removeItem("currloginuser");
-    dispatch(userLoggedin());
-  }
-
-  function handleSignin() {
-    !userlogged ? navigate("/login") : handleSignout();
-    setToppened(!topopened);
   }
 
   return (
-    <div className={`maincontainer ${isBlurred ? "blur" : ""}`}>
+    <div className={`maincontainerofnavbar ${isBlurred ? "blur" : ""}`}>
       <div className="navbarcontainer">
-        {/* ---------------------top most navbar------------------------ */}
-        <div className="firstnavbar">
-          <div>
-            <img
-              onClick={() => {
-                navigate("/");
-              }}
-              className="navbarlogo"
-              src={logoimage}
-            />
-          </div>
-          <div>
-            <div>
-              <h4 style={{ fontWeight: "600" }}>MASAI</h4>
-            </div>
-            <div className="bordertype"></div>
-            <div>
-              <h4 style={{ fontWeight: "600" }}>LUDO</h4>
-            </div>
-          </div>
-          <div id="linksofcomp" className="linksofcomp">
-            <p
-              onClick={() => {
-                navigate("/about");
-              }}
-            >
-              About
-            </p>
-            <p
-              onClick={() => {
-                !userlogged ? navigate("/login") : handleSignout();
-              }}
-            >
-              {userlogged ? "Sign Out" : "Sign in"}
-            </p>
-          </div>
-
-          <div id="bergmenutop" className="bergmenutop">
-            <p>
-              {topopened ? (
-                <i
-                  onClick={() => {
-                    setToppened(!topopened);
-                  }}
-                  className="ri-close-large-line"
-                ></i>
-              ) : (
-                <i
-                  onClick={() => {
-                    setToppened(!topopened);
-                  }}
-                  className="ri-menu-4-line"
-                ></i>
-              )}
-            </p>
-          </div>
-
-          <div id={topopened ? "openthetopisebar" : "closethetopsidebar"}>
-            <img
-              onClick={handleImageClick}
-              src={logoimage}
-              className="navbarlogo"
-            />
-            <p onClick={handleCart}>Cart</p>
-            <p onClick={handleSignin}>{userlogged ? "Sign Out" : "Sign in"}</p>
-          </div>
+        <div className="brandlogo">
+          <img onClick={() => navigate("/")} src={barndlogo} />
+          <h2>
+            <span style={{ color: "red" }}>L</span>udo{" "}
+            <span style={{ color: "red" }}>V</span>erse
+          </h2>
         </div>
-
-        {/* ---------------------top most navbar------------------------ */}
-
-        {/* ---------------------top most border of navbar------------------------ */}
-
-        <div className="bottomborder"></div>
-
-        {/* ---------------------top most border of navbar------------------------ */}
-
-       
+        <div className="allnavlinks">
+          <p onClick={() => navigate("/")}>Home</p>
+          <p>About</p>
+          {islogged ? (
+            <>
+              <p>
+                <span style={{ color: "red" }}>Wlcm, </span> {name}
+              </p>
+              <p onClick={handleLogout}>Logout</p>
+            </>
+          ) : (
+            <>
+              <p onClick={() => navigate("/login")}>Login</p>
+              <p onClick={() => navigate("/signup")}>Signup</p>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
