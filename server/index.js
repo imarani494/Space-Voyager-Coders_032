@@ -1,7 +1,7 @@
-const express = require("express");
-const { connection } = require("./config/db");
-const { userRoute } = require("./routes/user.route");
-const cors = require("cors");
+const express = require("express"); 
+const { connection } = require("./config/db"); 
+const { userRoute } = require("./routes/user.route"); 
+const cors = require("cors"); 
 
 const app = express();
 
