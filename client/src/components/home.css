@@ -1,0 +1,73 @@
+.mainhomecontainer {
+  max-width: 1360px;
+  margin: auto;
+  padding: 10px 35px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.mainhomecontainer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  color: white;
+  margin-top: 80px;
+}
+
+
+.ludoonlinetext {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.styledborder {
+  height: 1.5px;
+  width: 60%;
+  border-radius: 50%;
+  background: linear-gradient(to right, transparent, #dc0370, transparent);
+}
+
+.ludoonlinetextp {
+  font-size: 20px;
+  color: #b8b8b8;
+  width: 75%;
+  text-align: center;
+}
+
+.dicecubeimage {
+  perspective: 1000px;
+}
+
+.dicecubeimage img {
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  animation: rotate3D 3s infinite ease-in-out;
+  backface-visibility: hidden;
+}
+
+@keyframes rotate3D {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+#playnowbutton{
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: #dc0370;
+  color: white;
+  cursor: pointer;
+  border: none;
+  width: auto;
+}
+
+#playnowbutton:hover{
+  background-color: #c00253;
+}
