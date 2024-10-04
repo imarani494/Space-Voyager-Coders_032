@@ -34,7 +34,7 @@ export const About = () => {
         <p className="about_para">
           The system automatically creates community pages for gamers on the
           platform around the game they are playing. The ability to see each
-          other's gameplay by default is coming soon to these community pages
+          others gameplay by default is coming soon to these community pages
         </p>
 
         <p className="about_para">

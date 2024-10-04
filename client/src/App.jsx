@@ -5,7 +5,6 @@ import { LoginPage } from "./components/loginpage";
 import { NavBar } from "./components/navbar";
 import { Routes, Route } from "react-router-dom";
 import { SignupPage } from "./components/signup";
-// import { LudoBoard } from "./components/ludodashboard";
 import { Ludoss } from "./ludoss";
 import { About } from "./components/about";
 
@@ -17,9 +16,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        {/* <Route path="/ludo" element={<LudoBoard />} /> */}
         <Route path="/ludo" element={<Ludoss />} />
-        <Route path="/about" element={<About/>}/>
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>
