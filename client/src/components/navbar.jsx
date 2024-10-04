@@ -45,7 +45,7 @@ export const NavBar = () => {
         </div>
         <div className="allnavlinks">
           <p onClick={() => navigate("/")}>Home</p>
-          <p>About</p>
+          <p style={{cursor: "pointer"}} onClick={()=>navigate("/about")}>  About</p>
           {islogged ? (
             <>
               <p>

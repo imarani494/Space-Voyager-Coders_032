@@ -5,8 +5,9 @@ import { LoginPage } from "./components/loginpage";
 import { NavBar } from "./components/navbar";
 import { Routes, Route } from "react-router-dom";
 import { SignupPage } from "./components/signup";
-import { LudoBoard } from "./components/ludodashboard";
+// import { LudoBoard } from "./components/ludodashboard";
 import { Ludoss } from "./ludoss";
+import { About } from "./components/about";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         {/* <Route path="/ludo" element={<LudoBoard />} /> */}
         <Route path="/ludo" element={<Ludoss />} />
+        <Route path="/about" element={<About/>}/>
       </Routes>
       <Footer />
     </>
