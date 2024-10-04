@@ -94,7 +94,7 @@ label{
   font-size: 16px;
   font-weight: 500;
 }
-input{
+.signupinput{
   display: block;
   height: 40px;
   width: 100%;
@@ -108,7 +108,7 @@ input{
 ::placeholder{
   color: #e5e5e5;
 }
-button{
+.signupbutton{
   margin-top: 30px;
   width: 100%;
   background-color: #ffffff;

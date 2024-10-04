@@ -1,15 +1,19 @@
 import { useSelector } from "react-redux";
+import {useNavigate} from "react-router-dom"
 import dicecube from "../assets/ludo dice.png";
 import "./home.css";
+import axios from "axios"
+import { useState } from "react";
 
 export const Home = () => {
   let islogged = useSelector((state) => state.loggedIn);
+  let navigate = useNavigate()
 
   function handlePlay() {
     if (!islogged) {
       alert("Please Log In to Play Online");
     } else {
-      window.open("https://now.us/apps/playtouch/51367/ludo-classic-a-dice-game.html");
+      navigate("/ludo")
     }
   }
 
