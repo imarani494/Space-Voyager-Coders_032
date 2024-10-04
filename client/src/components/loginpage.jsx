@@ -47,15 +47,15 @@ export const LoginPage = () => {
       <form id="form">
         <h3>Login Here</h3>
         <label htmlFor="username">Username</label>
-        <input ref={emailref} type="email" placeholder="Email" id="username" />
+        <input className="logininput" ref={emailref} type="email" placeholder="Email" id="username" />
         <label htmlFor="password">Password</label>
-        <input
+        <input className="logininput"
           ref={passwordref}
           type="password"
           placeholder="Password"
           id="password"
         />
-        <button id="loginbtnn" onClick={handleSubmit}>Log In</button>
+        <button className="signupbutton" id="loginbtnn" onClick={handleSubmit}>Log In</button>
         <div
           style={{
             width: "100%",
