@@ -25,7 +25,7 @@ export const SignupPage = () => {
     };
     axios
       .post(
-        "https://space-voyager-coders-032.onrender.com/api/users/register",
+        "https://ludo-backend-njys.onrender.com/api/users/register",
         obj
       )
       .then((res) => {

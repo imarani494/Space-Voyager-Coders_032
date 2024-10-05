@@ -24,7 +24,7 @@ export const LoginPage = () => {
       password,
     };
     axios
-      .post("https://space-voyager-coders-032.onrender.com/api/users/login", obj,{
+      .post("https://ludo-backend-njys.onrender.com/api/users/login", obj,{
         headers: {
           "Content-Type": "application/json",
         },
