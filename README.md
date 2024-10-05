@@ -5,10 +5,10 @@ The Ludo-Verse project is an interactive, real-time, multiplayer online Ludo gam
 - Frontend | Backend
 
 # Deployed Link
-- 
+- https://space-voyager-coders-032.vercel.app/
 
 # Presentation Link
-- 
+- https://youtu.be/nWIsKg6fBFE
   
 # Features 
 - Real-time multiplayer game using Socket.IO.
