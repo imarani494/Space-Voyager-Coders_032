@@ -23,13 +23,11 @@ export const SignupPage = () => {
       email: email,
       password: password,
     };
-    console.log(obj);
     axios
-      .post("https://space-voyager-coders-032.onrender.com/api/users/register", obj,{
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .post(
+        "https://space-voyager-coders-032.onrender.com/api/users/register",
+        obj
+      )
       .then((res) => {
         alert("User registered successfully");
         navigate("/login");

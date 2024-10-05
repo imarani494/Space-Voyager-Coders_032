@@ -8,7 +8,12 @@ const path = require("path");
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
+
+app.use(cors(corsOptions));
 
 const server = http.createServer(app);
 
