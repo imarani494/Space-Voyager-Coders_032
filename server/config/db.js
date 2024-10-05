@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const connection = mongoose.connect("mongodb://localhost:27017/LudoVerse");
+let URI = process.env.MONGO_URI;
+
+const connection = mongoose.connect(URI);
 
 module.exports = { connection };

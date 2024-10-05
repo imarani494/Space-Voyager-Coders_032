@@ -45,7 +45,8 @@ export const SignupPage = () => {
       <form>
         <h3>Sign up Here</h3>
         <label htmlFor="name">Name</label>
-        <input className="signupinput"
+        <input
+          className="signupinput"
           ref={nameref}
           type="text"
           placeholder="Name"
@@ -53,7 +54,8 @@ export const SignupPage = () => {
           required
         />
         <label htmlFor="username">Username</label>
-        <input className="signupinput"
+        <input
+          className="signupinput"
           ref={emailref}
           type="email"
           placeholder="Email"
@@ -61,7 +63,8 @@ export const SignupPage = () => {
           required
         />
         <label htmlFor="password">Password</label>
-        <input className="signupinput"
+        <input
+          className="signupinput"
           ref={passwordref}
           type="password"
           placeholder="Password"
@@ -69,7 +72,13 @@ export const SignupPage = () => {
           required
           minLength={8}
         />
-        <button className="signupbutton" id="loginbtnn"  onClick={handleSignupSubmit}>Sign up</button>
+        <button
+          className="signupbutton"
+          id="loginbtnn"
+          onClick={handleSignupSubmit}
+        >
+          Sign up
+        </button>
         <div
           style={{
             width: "100%",

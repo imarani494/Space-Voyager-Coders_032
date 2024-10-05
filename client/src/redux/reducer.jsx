@@ -1,14 +1,14 @@
-import { IS_LOGIN } from "./actions"
+import { IS_LOGIN } from "./actions";
 
 const initstate = {
   loggedIn: localStorage.getItem("token") ? true : false,
-}
+};
 
-export function Reducer  (state=initstate,action){
-  switch(action.type){
+export function Reducer(state = initstate, action) {
+  switch (action.type) {
     case IS_LOGIN:
-      return {...state, loggedIn: action.payload}
+      return { ...state, loggedIn: action.payload };
     default:
-      return state
+      return state;
   }
 }

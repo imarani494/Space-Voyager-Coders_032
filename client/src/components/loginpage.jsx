@@ -9,7 +9,7 @@ export const LoginPage = () => {
   let emailref = useRef("");
   let passwordref = useRef("");
   let navigate = useNavigate();
-  let dispatch = useDispatch()
+  let dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,15 +47,24 @@ export const LoginPage = () => {
       <form id="form">
         <h3>Login Here</h3>
         <label htmlFor="username">Username</label>
-        <input className="logininput" ref={emailref} type="email" placeholder="Email" id="username" />
+        <input
+          className="logininput"
+          ref={emailref}
+          type="email"
+          placeholder="Email"
+          id="username"
+        />
         <label htmlFor="password">Password</label>
-        <input className="logininput"
+        <input
+          className="logininput"
           ref={passwordref}
           type="password"
           placeholder="Password"
           id="password"
         />
-        <button className="signupbutton" id="loginbtnn" onClick={handleSubmit}>Log In</button>
+        <button className="signupbutton" id="loginbtnn" onClick={handleSubmit}>
+          Log In
+        </button>
         <div
           style={{
             width: "100%",
