@@ -1,0 +1,162 @@
+.line {
+  height: 1.5px;
+  width: 90%;
+  border-radius: 50%;
+  background: linear-gradient(to right, transparent, #dc0370, transparent);
+}
+
+.ludo-description {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.model-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.model-header {
+  max-width: 900px;
+  text-align: left;
+}
+
+.headingofall {
+  color: #f0a500;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.faq-answer {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.htwoh {
+  font-size: 2rem;
+  color: #f0a500;
+  margin-top: 40px;
+}
+
+.faq-section {
+  margin-top: 30px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  background-color: #313131;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+.arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  background-color: #444;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 708px) {
+  .model-header {
+    padding: 20px;
+  }
+
+  .headingofall {
+    font-size: 2rem;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+  }
+
+  .htwoh {
+    font-size: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Center alignment */
+.center {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.line-two {
+  background-color: rgb(130, 25, 25);
+  margin: 10px auto;
+  height: 1.5px;
+  width: 90%;
+  border-radius: 50%;
+  background: linear-gradient(to right, transparent, #dc0370, transparent);
+}
+
+.content-container {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  color: white;
+}
+
+.text-content {
+  font-size: 16px;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.styled-button {
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

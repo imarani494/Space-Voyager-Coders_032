@@ -1,0 +1,92 @@
+.chattingbox {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.messagecontainer {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  overflow-y: scroll;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #313131;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.chattingbox h2 {
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.chattingbox p {
+  font-size: 14px;
+  color: black;
+}
+
+.messagetextdiv {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.sendingbuttonofmessage {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.sendingbuttonofmessage input {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: bisque;
+}
+
+.sendingbuttonofmessage input::placeholder {
+  color: black;
+}
+
+.sendingbuttonofmessage button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+}
