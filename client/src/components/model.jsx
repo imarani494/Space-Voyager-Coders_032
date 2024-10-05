@@ -1,5 +1,5 @@
-import  { useState } from "react";
-import "./Model.css"; 
+import { useState } from "react";
+import "./model.css";
 
 const FAQ = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,9 @@ function Model() {
   return (
     <div className="model-container">
       <header className="model-header">
-        <h1>Play your favorite Ludo Games on PC & Mobile</h1>
+        <h1 className="headingofall">
+          Play your favorite Ludo Games on PC & Mobile
+        </h1>
 
         <div className="line-container">
           <div className="line"></div>
@@ -63,7 +65,7 @@ function Model() {
         </div>
 
         <div className="center">
-          <h2>FAQs</h2>
+          <h2 className="htwoh">FAQs</h2>
           <div className="line-two"></div>
         </div>
 

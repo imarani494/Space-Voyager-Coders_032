@@ -1,23 +1,14 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-
-  color: #fff;
-}
-
 .line {
-  width: 92%;
-  height: 1px;
-  margin-top: 30px;
-  background-color: rgb(134, 25, 25);
+  height: 1.5px;
+  width: 90%;
+  border-radius: 50%;
+  background: linear-gradient(to right, transparent, #dc0370, transparent);
 }
 
 .ludo-description {
   color: white;
   font-size: 16px;
   line-height: 1.5;
-  height: 100%;
   margin-top: 30px;
 }
 
@@ -25,10 +16,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 120vh;
   padding: 40px;
   box-sizing: border-box;
-  background: linear-gradient(135deg, #000000, #333333);
+  color: white;
 }
 
 .model-header {
@@ -36,19 +26,19 @@ body {
   text-align: left;
 }
 
-h1 {
+.headingofall {
   color: #f0a500;
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-p {
+.faq-answer {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-h2 {
+.htwoh {
   font-size: 2rem;
   color: #f0a500;
   margin-top: 40px;
@@ -65,7 +55,8 @@ h2 {
 .faq-question {
   width: 100%;
   padding: 15px;
-  background-color: #7a7272;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  background-color: #313131;
   color: #fff;
   border: none;
   border-radius: 9px;
@@ -76,11 +67,10 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s ease;
 }
 
 .faq-question:hover {
-  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
 }
 
 .arrow {
@@ -105,15 +95,15 @@ h2 {
     padding: 20px;
   }
 
-  h1 {
+  .headingofall {
     font-size: 2rem;
   }
 
-  p {
+  .faq-answer {
     font-size: 1rem;
   }
 
-  h2 {
+  .htwoh {
     font-size: 1.5rem;
   }
 
@@ -133,18 +123,20 @@ h2 {
 }
 
 .line-two {
-  width: 8%;
-  height: 1px;
   background-color: rgb(130, 25, 25);
   margin: 10px auto;
+  height: 1.5px;
+  width: 90%;
+  border-radius: 50%;
+  background: linear-gradient(to right, transparent, #dc0370, transparent);
 }
 
 .content-container {
   margin: 20px auto;
   padding: 20px;
-
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  color: white;
 }
 
 .text-content {
@@ -159,14 +151,12 @@ h2 {
 }
 
 .styled-button {
-  border: 1px solid rgb(93, 18, 18);
+  border: 1px solid white;
   background-color: transparent;
-  color: rgb(94, 23, 23);
+  color: white;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
-

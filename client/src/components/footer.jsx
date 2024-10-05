@@ -29,13 +29,18 @@ export const Footer = () => {
         </div>
       </div>
       <div className="footercontainersecond">
-          <p><i className="ri-twitter-fill"></i></p>
-          <p><i className="ri-youtube-fill"></i></p>
-          <p><i className="ri-pinterest-fill"></i></p>
+        <p>
+          <i className="ri-twitter-fill"></i>
+        </p>
+        <p>
+          <i className="ri-youtube-fill"></i>
+        </p>
+        <p>
+          <i className="ri-pinterest-fill"></i>
+        </p>
       </div>
       <div className="copyrighttext">
-        <p>Copyright © 2024 Ludo Verse. All rights reserved.
-        </p>
+        <p>Copyright © 2024 Ludo Verse. All rights reserved.</p>
       </div>
     </div>
   );
