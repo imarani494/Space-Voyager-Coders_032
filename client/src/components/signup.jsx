@@ -25,7 +25,7 @@ export const SignupPage = () => {
     };
     console.log(obj);
     axios
-      .post("http://localhost:3001/api/users/register", obj)
+      .post("https://space-voyager-coders-032.onrender.com/api/users/register", obj)
       .then((res) => {
         alert("User registered successfully");
         navigate("/login");
