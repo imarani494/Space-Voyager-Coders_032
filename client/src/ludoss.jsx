@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import "./components/dice.css";
 
 export const Ludoss = () => {
-  const socket = io("http://localhost:3001");
+  const socket = io("https://space-voyager-coders-032.onrender.com");
 
   let [chat, setChat] = useState([]);
 
@@ -21,7 +21,7 @@ export const Ludoss = () => {
     setChat([...chat, msg]);
   });
 
-  const iframeSrc = "http://localhost:3001/api/ludogame";
+  const iframeSrc = "https://space-voyager-coders-032.onrender.com/api/ludogame";
   return (
     <>
       <div
