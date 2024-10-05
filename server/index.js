@@ -8,6 +8,8 @@ const path = require("path");
 
 const app = express();
 
+app.use(cors());
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -16,8 +18,6 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-
-app.use(cors());
 
 app.use(express.json());
 

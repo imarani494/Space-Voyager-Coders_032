@@ -24,7 +24,11 @@ export const LoginPage = () => {
       password,
     };
     axios
-      .post("https://space-voyager-coders-032.onrender.com/api/users/login", obj)
+      .post("https://space-voyager-coders-032.onrender.com/api/users/login", obj,{
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => {
         localStorage.setItem("token", JSON.stringify(res.data.token));
         localStorage.setItem("name", JSON.stringify(res.data.name));
