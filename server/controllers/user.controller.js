@@ -16,7 +16,9 @@ const createUser = async (req, res) => {
     return res.status(500).json({ message: "Internal server error" });
   }
 };
-
+// try{
+//   catch(
+  
 const loginUser = async (req, res) => {
   let { email, password } = req.body;
   try {
